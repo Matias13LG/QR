@@ -1,0 +1,11 @@
+:root {
+    --blanco: hsl(0, 0%, 100%);
+    --fondoClaro: hsl(212, 45%, 89%);
+    --fondoMedio: hsl(216, 15%, 48%);
+    --fondoOscuro: hsl(218, 44%, 22%);
+
+    
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
