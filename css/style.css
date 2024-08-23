@@ -1,11 +1,91 @@
 :root {
     --blanco: hsl(0, 0%, 100%);
-    --fondoClaro: hsl(212, 45%, 89%);
-    --fondoMedio: hsl(216, 15%, 48%);
-    --fondoOscuro: hsl(218, 44%, 22%);
-
-    
+    --fondo: hsl(212, 45%, 89%);
+    --letrita: hsl(216, 15%, 48%);
+    --letra: hsl(218, 44%, 22%);
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-weight: 700;
+    color: var(--letra);
+    font-size: 4rem;
+}
+
+h2 {
+    font-weight: 400;
+    color: var(--letrita);
+    font-size: 3rem;
+}
+
+body {
+    background-image: linear-gradient(to top, var(--blanco) 0%, var(--fondo) 1%);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer {
+    width: min(90%, 120rem);
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/** Globales **/
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+/** Utilidades **/
+
+.header__qr {
+    border-radius: 2rem;
+}
+
+.cuerpo {
+    background-color: var(--blanco);
+    font-family: "Outfit", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.3;
+
+    max-width: 60rem;
+    min-width: 20rem;
+
+    width: 100%;
+    padding: 3rem;
+    border-radius: 2rem;
+    margin: 40rem;
+}
+
+@media (max-width: 480px) {
+    .cuerpo {
+        margin: 20rem 20rem 20rem 20rem;
+        width: 80%;
+        line-height: 1.5;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+}
